@@ -148,7 +148,7 @@
 
    /* Main content styles */
    .main_contant {
-       width: 100%;
+       width: 95%;
        display: flex;
        justify-content: center;
        align-items: center;
@@ -261,7 +261,7 @@
        position: absolute;
        top: 20px;
        left: 20px;
-       background-color: #ff7b00;
+       background-color: red;
        color: white;
        border: none;
        width: 30px;
