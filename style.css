@@ -1,0 +1,2208 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: 'Arial', Helvetica, sans-serif;
+       line-height: 1.6;
+       color: #333;
+   }
+
+
+   .figma_main {
+       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/background2.jpg") center/cover no-repeat;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .header {
+       width: 100%;
+       padding: 0.5rem 0;
+   }
+
+   .navbar {
+       width: 90%;
+       max-width: 1200px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0.3rem 1rem;
+       background-color: #3d5e3a;
+       border-radius: 0 0 1rem 1rem;
+       margin: 0 auto;
+   }
+
+   .sub_container1,
+   .sub_container2 {
+       display: flex;
+       align-items: center;
+       gap: 0.5rem;
+   }
+
+   .mail {
+       color: white;
+       text-decoration: none;
+       font-size: 0.75rem;
+   }
+
+   .sub_container2 i {
+       font-size: 0.9rem;
+       color: white;
+       transition: transform 0.3s ease;
+   }
+
+   .sub_container2 i:hover {
+       transform: scale(1.2);
+   }
+
+   .main_nav {
+       background-color: #3c5e3b;
+       width: 90%;
+       border-radius: 20px;
+   }
+
+   .nav {
+       padding: 5px;
+       width: 90%;
+       max-width: 1200px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin: 0 auto;
+   }
+
+   .logo {
+       color: white;
+       font-size: 1.5rem;
+       font-weight: bold;
+   }
+
+   .menu {
+       display: flex;
+       align-items: center;
+       gap: 1rem;
+   }
+
+   .menu a {
+       color: white;
+       text-decoration: none;
+       font-size: 0.9rem;
+       transition: color 0.3s ease;
+   }
+
+   .menu a:hover {
+       color: #ffd700;
+   }
+
+   .get-started {
+       background-color: #ff7b00;
+       color: black;
+       padding: 0.3rem 0.8rem;
+       border-radius: 1rem;
+   }
+
+   .get-started:hover {
+       background-color: #e66b00;
+   }
+
+   .dropdown {
+       position: relative;
+   }
+
+   .dropdown-content {
+       display: none;
+       position: absolute;
+       background-color: #2e3d2e;
+       min-width: 120px;
+       border-radius: 0.5rem;
+       z-index: 100;
+   }
+
+   .dropdown-content a {
+       color: #d4c29f;
+       padding: 0.5rem;
+       display: block;
+   }
+
+   .dropdown-content a:hover {
+       background-color: #4a704a;
+   }
+
+   .dropdown:hover .dropdown-content {
+       display: block;
+   }
+
+   .navBtn {
+       display: none;
+       font-size: 1.5rem;
+       color: white;
+       background-color: #333;
+       padding: 0.3rem 0.5rem;
+       border-radius: 0.3rem;
+       cursor: pointer;
+   }
+
+   /* Main content styles */
+   .main_contant {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 1rem;
+       flex: 1 1 auto;
+   }
+
+   .sub_contant1 {
+       width: 50%;
+       color: white;
+       padding: 1rem;
+   }
+
+   .sub_contant1 h1 {
+       font-size: 1.5rem;
+   }
+
+   .sub_contant1 p {
+       font-size: 1rem;
+   }
+
+   .button1,
+   .button2 {
+       padding: 0.5rem 1rem;
+       margin: 0.3rem;
+       border-radius: 1rem;
+       border: 2px solid #fff;
+       background-color: #00ff62;
+       color: black;
+       cursor: pointer;
+   }
+
+   .button1:hover,
+   .button2:hover {
+       background-color: white;
+       transform: scale(1.05);
+   }
+
+   .sub_contant2 {
+       width: 50%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .icon1 {
+       font-size: 3rem;
+       color: red;
+       text-decoration: none;
+       transition: transform 0.5s ease;
+   }
+
+   .icon1:hover {
+       transform: rotate(360deg);
+   }
+
+   /* Counters */
+   .row {
+       width: 85%;
+       display: flex;
+       justify-content: space-between;
+       margin: 1rem auto;
+   }
+
+   .col {
+       flex-basis: 22%;
+       text-align: center;
+   }
+
+   .counter-box {
+       background: rgb(177, 255, 177);
+       padding: 10px 0;
+       border-radius: 5px;
+       box-shadow: 0 0 20px -4px #66676c;
+   }
+
+   .counter-box h2 {
+       margin: 10px 0;
+       color: #000;
+   }
+
+   .counter-box .fa {
+       font-size: 1.5rem;
+       color: rgb(0, 92, 31);
+   }
+
+   .counter-box h4 {
+       font-size: 0.8rem;
+       color: #555;
+   }
+
+   /* Overlay */
+   .overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       height: 100vh;
+       width: 100vw;
+       background: rgba(0, 0, 0, 0.4);
+       display: none;
+       z-index: 998;
+   }
+
+   .overlay.show {
+       display: block;
+   }
+
+   .close-btn {
+       display: none;
+       position: absolute;
+       top: 20px;
+       left: 20px;
+       background-color: #ff7b00;
+       color: white;
+       border: none;
+       width: 30px;
+       height: 30px;
+       border-radius: 50%;
+       font-size: 1rem;
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+   }
+
+   .close-btn:hover {
+       background-color: #e66b00;
+   }
+
+
+   .house {
+       width: 100%;
+       min-height: 600px;
+       background-color: white;
+       padding-bottom: 50px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .house_main {
+       padding-top: 100px;
+       margin: 0 auto;
+       width: 80%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       color: black;
+   }
+
+   .house_desc h1 {
+       font-size: 2em;
+       margin: 10px 0;
+   }
+
+   .houselogo {
+       font-size: 20px;
+       color: black;
+   }
+
+   .housephoto {
+       width: 80%;
+       height: 60%;
+       display: flex;
+       align-items: flex-start;
+   }
+
+   .photodesc {
+       width: 30%;
+       height: 260px;
+       padding: 20px;
+       border: 5px solid white;
+       border-radius: 25px;
+       background-color: #4A704A;
+       color: white;
+       flex-shrink: 0;
+       margin-right: 20px;
+   }
+
+   .photodesc .p1 {
+       font-size: 40px;
+   }
+
+
+   .slider-container1 {
+       width: 70%;
+       height: 240px;
+       position: relative;
+       overflow: hidden;
+       margin-left: -50px;
+       margin-top: 29px;
+
+   }
+
+   .slides {
+       display: flex;
+       width: 300%;
+       height: 100%;
+       transition: transform 0.5s ease-in-out;
+   }
+
+   .slide {
+       width: 33.33%;
+       display: flex;
+       justify-content: space-between;
+       gap: 10px;
+   }
+
+   .photo {
+       width: 32%;
+       height: 200px;
+       border: 5px solid white;
+       border-radius: 25px;
+       background-size: cover;
+       background-position: center;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   }
+
+   .photo1 {
+       background-image: url("images/photo1.jpg");
+   }
+
+   .photo2 {
+       background-image: url("images/photo2.webp");
+   }
+
+   .photo3 {
+       background-image: url("images/photo3.webp");
+   }
+
+   .photo4 {
+       background-image: url("images/photo4.jpg");
+   }
+
+   .photo5 {
+       background-image: url("images/photo5.jpg");
+   }
+
+   .photo6 {
+       background-image: url("images/photo6.jpg");
+   }
+
+   .photo7 {
+       background-image: url("images/photo7.webp");
+   }
+
+   .photo8 {
+       background-image: url("images/photo8.jpg");
+   }
+
+   .photo9 {
+       background-image: url("images/photo9.webp");
+   }
+
+   .nav-button {
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       background: black;
+       color: white;
+       border: none;
+       padding: 10px 15px;
+       cursor: pointer;
+       font-size: 18px;
+       border-radius: 5px;
+       z-index: 10;
+   }
+
+   .prev {
+       left: 10px;
+   }
+
+   .next {
+       right: 10px;
+   }
+
+   .service {
+       width: 100%;
+       height: 600px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+   }
+
+   .sub_service1 {
+       width: 90%;
+       max-width: 1200px;
+       text-align: center;
+       padding: 2rem 0;
+   }
+
+   .sub_service1 h1 {
+       font-size: clamp(1.5rem, 3vw, 2rem);
+   }
+
+   .sub_service2 {
+       width: 90%;
+       max-width: 1200px;
+       display: flex;
+       justify-content: space-around;
+       flex-wrap: wrap;
+       gap: 1rem;
+   }
+
+   .part1,
+   .part2,
+   .part3 {
+       width: 30%;
+       padding: 1.5rem;
+       border: 4px solid #333;
+       border-radius: 1rem;
+       background-color: white;
+       text-align: center;
+       transition: transform 0.3s ease, background-color 0.3s ease;
+   }
+
+   .part1:hover,
+   .part2:hover,
+   .part3:hover {
+       background-color: #4a704a;
+       transform: scale(1.03);
+       color: white;
+   }
+
+   .part1 i,
+   .part2 i,
+   .part3 i {
+       font-size: 2rem;
+       color: #00740f;
+   }
+
+   .part1 h1,
+   .part2 h1,
+   .part3 h1 {
+       font-size: clamp(1.25rem, 2vw, 1.5rem);
+       margin: 0.5rem 0;
+   }
+
+   .part1 p,
+   .part2 p,
+   .part3 p {
+       font-size: clamp(0.875rem, 1.5vw, 1rem);
+   }
+
+   .btn {
+       font-family: 'Courier New', Courier, monospace;
+       padding: 0.5rem 1rem;
+       border-radius: 1.5rem;
+       border: 2px solid #333;
+       background-color: transparent;
+       cursor: pointer;
+       font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+       transition: all 0.3s ease;
+   }
+
+   .btn:hover {
+       background-color: #00ff62;
+       transform: scale(1.05);
+   }
+
+   .househall {
+       height: 600px;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .right_hall {
+       width: 40%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+   }
+
+   .sub_hall1 {
+
+       width: 55%;
+
+       border-radius: 20px;
+       border: 5px solid white;
+       height: 300px;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   }
+
+   .sub_hall1 img {
+       height: 100%;
+       width: 100%;
+       border-radius: 25px;
+   }
+
+   .sub_hall2 img {
+       height: 100%;
+       width: 100%;
+       border-radius: 25px;
+
+   }
+
+   .sub_hall2 {
+       width: 55%;
+
+       border-radius: 20px;
+       border: 5px solid white;
+       height: 300px;
+       margin-top: 180px;
+       margin-left: -100px;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   }
+
+   .sub_hall3 {
+       width: 40%;
+       background-color: #3d5e3a;
+       color: white;
+       border-radius: 20px;
+       border: 5px solid white;
+       height: 100px;
+       margin-left: -400px;
+       margin-bottom: -280px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+   }
+
+   .left_hall {
+       width: 50%;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       gap: 30px;
+   }
+
+
+
+   .btn {
+       background-color: #4a7046;
+       color: #fff;
+       border: none;
+       padding: 10px 20px;
+       border-radius: 25px;
+       font-size: 16px;
+       cursor: pointer;
+       width: fit-content;
+       align-self: flex-start;
+   }
+
+   .btn:hover {
+       background-color: #3d5e3a;
+   }
+
+
+   .main_stage {
+       width: 100%;
+       height: 600px;
+       background: #254721;
+       color: white;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       gap: 2rem;
+   }
+
+   .left_stage {
+       width: clamp(300px, 50%, 600px);
+       padding: 2rem;
+   }
+
+   .min_stage1 h1 {
+       font-size: clamp(1.5rem, 3vw, 2rem);
+   }
+
+   .min_stage2 {
+       display: flex;
+       gap: 1rem;
+   }
+
+   .sub_stage1 {
+       width: 100%;
+       background: url("images/stage.webp") center/cover no-repeat;
+       border-radius: 1rem;
+       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .sub_stage2 {
+       display: flex;
+       flex-direction: column;
+       gap: 1rem;
+   }
+
+   .desc1,
+   .desc2,
+   .desc3 {
+       display: flex;
+       align-items: center;
+       gap: 0.5rem;
+   }
+
+   .sub_desc1,
+   .sub_desc3,
+   .sub_desc5 {
+       font-size: 1.5rem;
+   }
+
+   .right_stage {
+       padding: 20px;
+       border: 5px solid white;
+       border-radius: 25px;
+       width: 30%;
+       height: 60%;
+       background-color: #4A704A;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   }
+
+   .stage1 p:first-child {
+       font-size: clamp(2rem, 4vw, 3rem);
+   }
+
+   .stage1 p {
+       font-size: clamp(0.875rem, 1.5vw, 1rem);
+   }
+
+   .stage2 li {
+       list-style: none;
+       font-size: clamp(0.875rem, 1.5vw, 1rem);
+   }
+
+   .kitchen {
+       background: #fff;
+       margin-bottom: 60px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       height: 600px;
+   }
+
+
+   .kitchen1 {
+       width: 90%;
+
+
+       text-align: center;
+       padding: 2rem 0;
+   }
+
+   .kitchen1 h1 {
+       font-size: clamp(1.5rem, 3vw, 2rem);
+   }
+
+   .kitchen2,
+   .kitchen3 {
+       width: 90%;
+       height: 50%;
+       display: flex;
+       flex-wrap: wrap;
+       gap: 1rem;
+       justify-content: center;
+   }
+
+   .sub_kitchen1,
+   .sub_kitchen2,
+   .sub_kitchen3,
+   .sub_kitchen4,
+   .sub_kitchen5,
+   .sub_kitchen6 {
+       width: clamp(200px, 30%, 350px);
+       height: 200px;
+       background-size: cover;
+       border: 4px solid white;
+       border-radius: 1rem;
+       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+       display: flex;
+       align-items: flex-end;
+       transition: transform 0.3s ease;
+   }
+
+   .sub_kitchen1:hover,
+   .sub_kitchen2:hover,
+   .sub_kitchen3:hover,
+   .sub_kitchen4:hover,
+   .sub_kitchen5:hover,
+   .sub_kitchen6:hover {
+       transform: scale(1.03);
+   }
+
+   .sub_kitchen1 {
+       background-image: url("images/kitchen.avif");
+   }
+
+   .sub_kitchen2 {
+       background-image: url("images/kitchen2.jpeg");
+   }
+
+   .sub_kitchen3 {
+       background-image: url("images/kitchen3.png");
+   }
+
+   .sub_kitchen4 {
+       background-image: url("images/kitchen4.jpeg");
+   }
+
+   .sub_kitchen5 {
+       background-image: url("images/kitchen5.avif");
+   }
+
+   .sub_kitchen6 {
+       background-image: url("images/kitchen6.avif");
+   }
+
+   .sub_kitchen1_text {
+       width: 100%;
+       padding: 1rem;
+       background: rgba(0, 0, 0, 0.5);
+       color: white;
+       border-radius: 0 0 1rem 1rem;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       opacity: 0;
+       transition: opacity 0.3s ease;
+   }
+
+   .sub_kitchen1:hover .sub_kitchen1_text,
+   .sub_kitchen2:hover .sub_kitchen1_text,
+   .sub_kitchen3:hover .sub_kitchen1_text,
+   .sub_kitchen4:hover .sub_kitchen1_text,
+   .sub_kitchen5:hover .sub_kitchen1_text,
+   .sub_kitchen6:hover .sub_kitchen1_text {
+       opacity: 1;
+   }
+
+   .icon2 {
+       font-size: 1.5rem;
+       color: white;
+   }
+
+   .room {
+       height: 550px;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       align-items: center;
+       background: #344e41;
+       color: white;
+   }
+
+   .sub_room1 {
+       width: 80%;
+       height: 30%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       color: white;
+   }
+
+   .room1_desc h1 {
+       font-size: 2em;
+       margin: 10px 0;
+   }
+
+   .roomlogo {
+       font-size: 20px;
+       color: white;
+   }
+
+   .sub_room2 {
+       width: 90%;
+       height: 60%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .mini_room1 {
+       width: 30%;
+       height: 65%;
+       background: url("images/room1.jpg") center/cover no-repeat;
+       border-right: 4px solid white;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .mini_room2 {
+       background-image: url("images/room2.jpg");
+       background-size: cover;
+       width: 60%;
+       height: 65%;
+       border-left: 4px solid white;
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+       overflow: hidden;
+
+   }
+
+   .slider-container {
+       height: 90%;
+       width: 100%;
+       padding: 20px;
+   }
+
+   .room_desc1,
+   .room_desc2,
+   .room_desc3,
+   .room_desc4,
+   .room_desc5,
+   .room_desc6 {
+       width: clamp(200px, 45%, 350px);
+       padding: 1rem;
+       border-radius: 1rem;
+       background-color: white;
+       color: #333;
+       text-align: center;
+   }
+
+   .description1 p:first-child {
+       font-size: 1rem;
+   }
+
+   .description1 p:last-child {
+       font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+   }
+
+   .description2 {
+       display: flex;
+       align-items: center;
+       gap: 0.5rem;
+       margin-top: 0.5rem;
+   }
+
+   .profilepic {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       background: url("images/profile1.png") center/cover no-repeat;
+   }
+
+   .profiledesc {
+       font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+   }
+
+   .main_living {
+       background: #f3ebdc;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 650px;
+   }
+
+   .container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       width: 90%;
+       max-width: 1200px;
+       position: relative;
+       height: 100%;
+       border-radius: 1rem;
+       overflow: hidden;
+   }
+
+   .background-image {
+       width: 90%;
+       height: 90%;
+       background: url(images/living1.avif) center / cover no-repeat;
+       transition: opacity 0.3s ease;
+       border-radius: 25px;
+   }
+
+   .content {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+       color: black;
+       opacity: 0;
+       transition: opacity 0.3s ease;
+   }
+
+   .content h1 {
+       font-size: clamp(1.5rem, 3vw, 2rem);
+   }
+
+   .content p {
+       font-size: clamp(0.875rem, 1.5vw, 1rem);
+   }
+
+   .content button {
+       padding: 0.75rem 1.5rem;
+       background-color: #4caf50;
+       color: black;
+       border: none;
+       border-radius: 0.3rem;
+       cursor: pointer;
+       font-size: clamp(0.875rem, 1.5vw, 1rem);
+       transition: transform 0.3s ease;
+   }
+
+   .container:hover .background-image {
+       opacity: 0.5;
+   }
+
+   .container:hover .content {
+       opacity: 1;
+   }
+
+   .balcony {
+       width: 100%;
+       height: 600px;
+       background: #f3ebdc;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+   }
+
+   .sub_balcony1 {
+       width: 80%;
+       height: 150px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .sub_balcony2 {
+       width: 90%;
+       height: 60%;
+       display: flex;
+       flex-wrap: wrap;
+       gap: 1rem;
+       justify-content: center;
+   }
+
+   .balcony_desc1,
+   .balcony_desc2,
+   .balcony_desc3 {
+       width: clamp(200px, 30%, 350px);
+       border: 2px solid white;
+       border-radius: 1rem;
+       background-color: white;
+       overflow: hidden;
+   }
+
+   .photodesc1,
+   .photodesc3,
+   .photodesc5 {
+       width: 100%;
+       height: 150px;
+       background-size: cover;
+       border-radius: 1rem 1rem 0 0;
+   }
+
+   .photodesc1 {
+       background-image: url("images/balcony1.jpg");
+   }
+
+   .photodesc3 {
+       background-image: url("images/balcony5.jpg");
+   }
+
+   .photodesc5 {
+       background-image: url("images/balcony6.webp");
+   }
+
+   .photodesc2,
+   .photodesc4,
+   .photodesc6 {
+       padding: 1rem;
+   }
+
+   .balcony_btn {
+       display: flex;
+       gap: 0.5rem;
+       margin-bottom: 0.5rem;
+   }
+
+   .btn_bal1,
+   .btn_bal2 {
+       padding: 0.5rem 1rem;
+       border-radius: 1rem;
+       border: none;
+       cursor: pointer;
+       font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+   }
+
+   .btn_bal1 {
+       background-color: #158815;
+       color: white;
+   }
+
+   .btn_bal2 {
+       background-color: #57d857;
+       color: black;
+   }
+
+   .balcony_desc h1 {
+       font-size: clamp(1.25rem, 2vw, 1.5rem);
+   }
+
+   .balcony_desc p {
+       font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+   }
+
+   footer {
+       height: auto;
+       background-color: #2f4f2f;
+       color: #f0e8d4;
+       padding: 2rem 0;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+   }
+
+   .footer-container {
+       width: 90%;
+       max-width: 1200px;
+       display: flex;
+       flex-wrap: wrap;
+       gap: 1rem;
+       justify-content: space-around;
+   }
+
+   .footer-section1,
+   .footer-section2,
+   .footer-section3,
+   .footer-section4 {
+       width: 22%;
+   }
+
+   .footer-section1 h3 {
+       font-size: clamp(1.25rem, 2vw, 1.5rem);
+   }
+
+   .footer-section2 ul,
+   .footer-section3 ul {
+       list-style: none;
+   }
+
+   .footer-section2 a,
+   .footer-section3 a,
+   .footer-section4 a {
+       color: #f0e8d4;
+       text-decoration: none;
+       font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+   }
+
+   .social-icons .icons {
+       font-size: 1.25rem;
+       margin-right: 0.5rem;
+   }
+
+   .footer .copyright {
+       margin-top: 20px;
+       font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+   }
+
+   .contact_form {
+       height: 700px;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .contact {
+       display: flex;
+       background: #f4ecdf;
+       padding: 20px;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       width: 80%;
+       max-width: 1000px;
+
+   }
+
+   .form-section,
+   .info-section {
+       flex: 1;
+       padding: 20px;
+   }
+
+   .form-section {
+       border-right: 1px solid #ddd;
+   }
+
+   .form-section h2 {
+       font-size: 24px;
+       margin-bottom: 10px;
+   }
+
+   .form-section p {
+       font-size: 14px;
+       margin-bottom: 20px;
+   }
+
+   input,
+   select,
+   textarea {
+       width: 100%;
+       padding: 10px;
+       margin-bottom: 10px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       box-sizing: border-box;
+   }
+
+   textarea {
+       height: 100px;
+       resize: none;
+   }
+
+   .contactbtn {
+       background-color: #6b705c;
+       color: white;
+       padding: 10px 20px;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       width: 100%;
+   }
+
+   button:hover {
+       background-color: #5a5f4c;
+   }
+
+   .info-section ul {
+       list-style: none;
+       padding: 0;
+   }
+
+   .info-section ul li {
+       margin-bottom: 15px;
+   }
+
+   .info-section ul li i {
+       margin-right: 10px;
+   }
+
+   .error {
+       color: red;
+       font-size: 12px;
+       margin-bottom: 10px;
+       display: block;
+   }
+
+
+   .house_main1 {
+       background: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914') center/cover no-repeat;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+
+   /* HERO */
+
+
+   .hero_tag {
+       text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+       /* text glow for visibility */
+   }
+
+   .hero {
+       padding: 60px 40px;
+       color: white;
+
+       text-align: center;
+   }
+
+   .hero h1 {
+       font-size: 40px;
+       margin: 10px 0;
+   }
+
+
+   /* MAIN CONTENT */
+   .content1 {
+       background-color: #f4ecdf;
+       display: flex;
+       padding: 40px;
+       gap: 30px;
+   }
+
+   .listing-area {
+       min-width: 300px;
+   }
+
+   .map-area {
+       background: #f3efe5;
+       border-radius: 12px;
+       text-align: center;
+       min-width: 280px;
+   }
+
+   .main_map {
+       width: 530px;
+       height: 600px;
+   }
+
+
+   /* APARTMENT CARDS */
+   .apartment-card {
+       background: #fff;
+       padding: 20px;
+       border-radius: 12px;
+       margin-bottom: 24px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   }
+
+   .apartment-card .tags {
+       display: flex;
+       gap: 3px;
+       font-size: 12px;
+       margin: 10px 0;
+   }
+
+   .tags span {
+       background: #eef0e5;
+       padding: 4px 10px;
+       border-radius: 999px;
+   }
+
+   .card-content {
+       display: flex;
+       gap: 20px;
+   }
+
+   .card-content img {
+       width: 220px;
+       height: 150px;
+       object-fit: cover;
+       border-radius: 10px;
+   }
+
+   .room-info {
+       font-size: 14px;
+       min-width: 200px;
+   }
+
+   .room-info p {
+       margin: 4px 0;
+   }
+
+   .room-info button {
+       margin-top: 12px;
+       background: #2f5f3a;
+       color: #fff;
+       padding: 8px 16px;
+       border: none;
+       border-radius: 6px;
+   }
+
+
+
+
+
+   @media (min-width: 1024px) {
+       .sub_hall3 {
+           margin-left: -300px;
+       }
+   }
+
+   @media (max-width: 1024px) {
+       .content1 {
+           flex-direction: column;
+           padding: 20px;
+       }
+
+
+
+       .room-info {
+           align-items: center;
+       }
+
+       .map-area {
+           width: 100%;
+           margin-top: 30px;
+       }
+
+       .hero h1 {
+           font-size: 32px;
+       }
+
+       .footer-section1,
+       .footer-section2,
+       .footer-section3,
+       .footer-section4 {
+           width: 45%;
+       }
+
+       .balcony {
+           height: 1000px;
+       }
+
+       .balcony_desc1,
+       .balcony_desc2 {
+           width: 40%;
+
+       }
+
+       .balcony_desc3 {
+           width: 40%;
+       }
+
+       .container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           width: 80%;
+           height: 80%;
+           border-radius: 1rem;
+           overflow: hidden;
+       }
+
+       .background-image {
+           width: 90%;
+           height: 90%;
+           background: url(images/living1.avif) center / cover no-repeat;
+           transition: opacity 0.3s ease;
+           border-radius: 25px;
+       }
+
+       .living {
+           font-size: 30px;
+       }
+
+       .sub_balcony2 {
+           width: 100%;
+           align-items: center;
+       }
+
+       .main_stage {
+           flex-direction: column;
+           height: 1100px;
+       }
+
+       .kitchen {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
+
+       .sub_hall1,
+       .sub_hall2 {
+           width: 230px;
+       }
+
+       .sub_hall3 {
+           margin-left: -300px;
+       }
+
+       .photodesc {
+           padding-right: 35px;
+       }
+
+       .left_stage {
+           width: 100%;
+           max-width: none;
+       }
+
+       .right_stage {
+           width: 55%;
+           height: 35%;
+       }
+
+
+       .slides {
+           width: 450%;
+       }
+
+       .slide {
+           width: 50%;
+       }
+
+       .house,
+       .service,
+       .househall,
+       .main_stage,
+       .room,
+       .balcony {
+           min-height: auto;
+       }
+
+       .sub_contant1,
+       .sub_contant2 {
+           width: 100%;
+           max-width: none;
+       }
+
+       .main_contant {
+           flex-direction: column;
+           text-align: center;
+       }
+
+       .sub_contant1 {
+           padding: 10px;
+       }
+
+       .sub_contant2 {
+           padding: 20px;
+       }
+
+   }
+
+   @media (max-width: 950px) {
+
+       .sub_hall1,
+       .sub_hall2 {
+           width: 180px;
+       }
+
+       .sub_hall3 {
+           margin-left: -230px;
+           font-size: 13px;
+       }
+
+   }
+
+   @media (max-width: 800px) {
+       .househall {
+           height: 800px;
+       }
+
+       .service {
+           height: 900px;
+       }
+
+       .slides {
+           width: 900%;
+       }
+
+       .slide {
+           width: 100%;
+       }
+
+       .part1,
+       .part2 {
+           width: 45%;
+
+       }
+
+       .part3 {
+           width: 50%;
+       }
+   }
+
+   @media (max-width: 600px) {
+       .hero {
+           padding: 40px 20px;
+       }
+
+       .hero h1 {
+           font-size: 26px;
+       }
+
+
+
+
+
+   }
+
+   @media (max-width: 560px) {
+       .col {
+           width: 50%;
+       }
+
+       .container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           width: 70%;
+           height: 65%;
+           border-radius: 1rem;
+           overflow: hidden;
+       }
+
+       .balcony {
+           height: 1300px;
+           padding-bottom: 150px;
+       }
+
+       .balcony_desc1,
+       .balcony_desc2,
+       .balcony_desc3 {
+           width: 60%;
+
+
+       }
+
+       .main_living {
+           height: 500px;
+       }
+
+       .background-image {
+           width: 90%;
+           height: 90%;
+           background: url(images/living1.avif) center / cover no-repeat;
+           transition: opacity 0.3s ease;
+           border-radius: 25px;
+       }
+
+       .content {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           text-align: center;
+           color: black;
+           opacity: 0;
+           transition: opacity 0.3s ease;
+       }
+
+       .part1,
+       .part2,
+       .part3 {
+           width: 90%;
+
+       }
+
+       .photodesc {
+           width: 60%;
+       }
+
+       .service {
+           height: 1000px;
+       }
+
+       .househall {
+           height: 1300px;
+           margin-top: 50px;
+           flex-direction: column;
+       }
+
+       .right_hall {
+           margin-right: 150px;
+       }
+
+       .sub_hall3 {
+           margin-left: -300px;
+           font-size: 12px;
+           text-align: center;
+
+       }
+
+       .contact_form {
+           height: 1300px;
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
+
+       .contact {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+           background: #fff;
+           border-radius: 10px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           width: 80%;
+           max-width: 800px;
+           height: 90%;
+       }
+
+       .form-section {
+           display: flex;
+           height: 60%;
+           justify-content: space-evenly;
+           flex-direction: column;
+           align-items: center;
+           width: 90%;
+       }
+
+       .info-section {
+           display: flex;
+           height: 40%;
+           justify-content: center;
+           text-align: center;
+           flex-direction: column;
+           align-items: center;
+           width: 90%;
+       }
+
+       .form-section h2 {
+           font-size: 24px;
+           padding: 20px;
+       }
+
+       .form-section p {
+           width: 230px;
+           text-align: center;
+           font-size: 14px;
+           margin-bottom: 20px;
+       }
+
+       input,
+       select {
+           width: 100%;
+           height: 40px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           box-sizing: border-box;
+       }
+
+       textarea {
+           width: 100%;
+           height: 100px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           box-sizing: border-box;
+       }
+
+       .form-section {
+           border-right: 1px solid #ffffff;
+       }
+
+
+   }
+
+
+   @media (max-width: 690px) {
+
+       .mini_room1,
+       .mini_room2 {
+           width: 100%;
+           min-width: 0;
+       }
+   }
+
+   @media (max-width: 860px) {
+       .menu a {
+           font-size: 12px;
+       }
+
+   }
+
+   @media only screen and (max-width: 768px) {
+
+
+       .nav .menu {
+           flex-direction: column;
+           position: fixed;
+           top: 0;
+           right: -100%;
+           width: 250px;
+           height: 100vh;
+           background-color: #3c5e3b;
+           padding-top: 80px;
+           transition: right 0.3s ease-in-out;
+           z-index: 999;
+       }
+
+       .nav .menu.active {
+           right: 0;
+       }
+
+       .navBtn {
+           display: block;
+       }
+
+       .close-btn {
+           display: block;
+           z-index: 1000;
+       }
+
+       .nav .menu a,
+       .dropdown {
+           text-align: left;
+       }
+
+       .dropdown-content {
+           position: static;
+           box-shadow: none;
+           background-color: #4a704a;
+       }
+
+       .room {
+           height: 600px;
+       }
+
+       .sub_room2 {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+       }
+
+       .mini_room1,
+       .mini_room2 {
+           height: 48%;
+       }
+
+       .mini_room2 {
+           padding-bottom: 50px;
+       }
+
+       .slick-list {
+           margin-bottom: 10px;
+       }
+
+       .kitchen {
+           height: 1100px;
+
+       }
+
+       .kitchen3 {
+           margin-top: 30px;
+           margin-bottom: 40px;
+       }
+
+       .sub_kitchen1,
+       .sub_kitchen2,
+       .sub_kitchen3,
+       .sub_kitchen4,
+       .sub_kitchen5,
+       .sub_kitchen6 {
+           width: 40%;
+           height: 50%;
+       }
+
+       .househall {
+           height: 1300px;
+
+           flex-direction: column;
+       }
+
+       .sub_hall1,
+       .sub_hall2 {
+           width: 250px;
+       }
+
+       .sub_hall3 {
+           margin-left: -300px;
+           font-size: 14px;
+       }
+
+
+       .service {
+           margin-top: 50px;
+       }
+
+       .photodesc {
+           width: 40%;
+       }
+
+
+
+   }
+
+   @media (max-width: 430px) {
+
+       .balcony {
+           margin-top: -200px;
+       }
+
+       .main_living {
+           height: 300px;
+       }
+
+       .sub_hall3 {
+           display: none;
+       }
+
+       .sub_hall1 img {
+           width: 200px;
+           height: 290px;
+       }
+
+       .sub_hall2 img {
+           width: 200px;
+           height: 290px;
+       }
+
+       .description1 p:last-child {
+           font-size: 10px;
+       }
+
+       .description1 p:first-child {
+           font-size: 10px;
+       }
+
+       .room1_desc h1 {
+           font-size: 30px;
+           margin: 10px 0;
+       }
+
+       .sub_stage2 {
+           width: 50%;
+           font-size: 13px;
+       }
+
+       .left_stage {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+       }
+
+       .min_stage2 {
+           margin-top: 50px;
+       }
+   }
+
+   @media (max-width: 480px) {
+       .navbar {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
+
+       .sub_contant1,
+       .sub_contant2 {
+           width: 100%;
+           text-align: center;
+       }
+
+       .main_contant {
+           flex-direction: column;
+       }
+
+       .hero {
+           padding: 30px 10px;
+           text-align: center;
+       }
+
+       .hero h1 {
+           font-size: 22px;
+       }
+
+       .hero p,
+       .hero h4 {
+           font-size: 14px;
+       }
+
+       .content1 {
+           padding: 10px;
+           flex-direction: column;
+       }
+
+       .card-content {
+           flex-direction: column;
+           gap: 12px;
+           align-items: center;
+       }
+
+       .card-content img {
+           width: 100%;
+           max-width: 100%;
+           height: auto;
+       }
+
+       .room-info {
+           font-size: 13px;
+           text-align: center;
+       }
+
+       .room-info button {
+           width: 100%;
+           padding: 10px;
+       }
+
+       .tags span {
+           font-size: 10px;
+           padding: 3px 8px;
+       }
+
+       .apartment-card {
+           padding: 15px;
+       }
+
+       .map-area h2 {
+           font-size: 18px;
+       }
+
+       .main_map {
+           width: 100%;
+       }
+
+       .footer-section1,
+       .footer-section2,
+       .footer-section3,
+       .footer-section4 {
+           width: 60%;
+       }
+
+       .balcony {
+           margin-top: -200px;
+       }
+
+       .sub_counter,
+       .part1,
+       .part2,
+       .part3,
+       .sub_kitchen1,
+       .sub_kitchen2,
+       .sub_kitchen3,
+       .sub_kitchen4,
+       .sub_kitchen5,
+       .sub_kitchen6,
+
+       .mini_room1,
+       .mini_room2 {
+           width: 100%;
+           min-width: 0;
+       }
+
+       .balcony_desc1,
+       .balcony_desc2,
+       .balcony_desc3 {
+           width: 60%;
+       }
+
+       .kitchen2,
+       .kitchen3 {
+           height: 50%;
+       }
+
+       .kitchen3 {
+           margin-bottom: 200px;
+       }
+
+
+
+
+       .sub_hall1 img {
+           width: 200px;
+           height: 290px;
+       }
+
+       .sub_hall2 img {
+           width: 200px;
+           height: 290px;
+       }
+
+       .sub_hall3 {
+           height: 100px;
+           font-size: 11px;
+           margin-left: -300px;
+           width: 100%;
+       }
+
+       .househall {
+           height: 1100px;
+           display: flex;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+
+       .main_living {
+           height: 450px;
+       }
+
+       .container {
+           height: 300px;
+       }
+
+
+       .photodesc {
+           width: 50%;
+           height: 300px;
+       }
+
+       .slider-container1 {
+           margin-top: 50px;
+       }
+
+       .house_desc h1,
+       .room1_desc h1,
+       .sub_service1 h1,
+       .left_hall h1,
+       .min_stage1 h1,
+       .kitchen1 h1,
+       .balcony_desc h1 {
+           font-size: clamp(1.25rem, 3vw, 1.5rem);
+       }
+
+       .left_hall p,
+       .stage1 p,
+       .stage2 li,
+       .balcony_desc p {
+           font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+       }
+
+
+
+
+   }
+
+   @media (max-width: 360px) {
+       .housephoto {
+           width: 90%;
+
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+       }
+
+       .photodesc {
+           width: 80%;
+       }
+
+       .slider-container1 {
+           margin-right: -40px;
+           margin-top: -100px;
+       }
+
+       .house_desc h1 {
+           font-size: 15px;
+       }
+
+       .houselogo {
+           font-size: 15px;
+       }
+
+       .navbar,
+       .nav .menu a,
+       .dropbtn {
+           font-size: clamp(0.625rem, 1.5vw, 0.75rem);
+       }
+       .icon1,
+       .icon2 {
+           font-size: clamp(1.25rem, 3vw, 1.5rem);
+       }
+
+       .househall {
+           height: 1100px;
+           display: flex;
+           justify-content: space-evenly;
+       }
+
+       .service {
+           height: 1200px;
+       }
+
+       .min_stage2 {
+           display: flex;
+       }
+
+       .sub_stage2 {
+           width: 100%;
+           font-size: 13px;
+       }
+
+   }
+
+   @media (max-width: 430px) {
+       .figma_main {
+           height: auto;
+       }
+
+       .row {
+           width: 90%;
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           gap: 10px;
+       }
+
+       .col {
+
+           box-sizing: border-box;
+           width: 90%;
+       }
+
+       .counter-box {
+           width: 100%;
+           text-align: center;
+           margin: 0;
+           padding: 10px 0;
+       }
+   }
+
+
+   @media (max-width: 360px) {
+       .left_hall {
+           width: 90%;
+       }
+
+       .right_hall {
+           width: 80%;
+           margin-left: -20px;
+           height: 60%;
+       }
+
+       .sub_hall1 img {
+           width: 160px;
+           height: 190px;
+       }
+
+       .sub_hall1 {
+           margin-left: 100px;
+           height: 200px;
+           width: 170px;
+       }
+
+       .sub_hall2 img {
+           width: 160px;
+           height: 190px;
+       }
+
+       .sub_hall2 {
+           height: 200px;
+           width: 170px;
+       }
+
+
+   }
+
+   @media (max-width:340px) {
+       .main_stage {
+           height: 1300px;
+       }
+
+       .left_stage {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+       }
+
+       .right_stage {
+           height: 300px;
+           width: 80%;
+       }
+
+       .min_stage2 {
+           display: flex;
+           flex-direction: column;
+
+       }
+
+       .sub_stage1 {
+           height: 300px;
+       }
+   }

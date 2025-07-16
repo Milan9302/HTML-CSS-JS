@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Slick Slider CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Slick Slider JS -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script
+            src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script
+            src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </head>
+    <body>
+        <div class="figma_main">
+            <header class="header">
+                <div class="navbar">
+                    <div class="sub_container1">
+                        <i class="fa fa-envelope icon"></i>
+                        <a href="#" class="mail">milanpatel6824@gmail.com</a>
+                        <i class="fa fa-square-phone phone"></i>
+                        <a href="#" class="mail">9876543215</a>
+                    </div>
+                    <div class="sub_container2">
+                        <i class="fa fa-whatsapp"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-snapchat"></i>
+                    </div>
+                </div>
+            </header>
+            <div class="main_nav">
+                <div class="nav">
+                    <div class="logo">🏠 HOUSE</div>
+                    <div class="menu" id="main">
+
+                        <button class="close-btn" id="closeMenu">X</button>
+
+                        <a href="index.html">HOME</a>
+                        <a href="about.html">ABOUT US</a>
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn">SERVICE <i
+                                    class="fa fa-caret-down caret icon11"></i></a>
+                            <div class="dropdown-content">
+                                <a href="ourservice.html">Our Service</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn">HOUSE<i
+                                    class="fa fa-caret-down caret icon11"></i></a>
+                            <div class="dropdown-content">
+                                <a href="house.html">Our House</a>
+
+                            </div>
+                        </div>
+                        <a href="contact.html">CONTACT US</a>
+
+                        <a href="#" class="get-started">GET STARTED</a>
+
+                    </div>
+                    <div class="navBtn">☰</div>
+                </div>
+            </div>
+            <div class="main_contant">
+                <div class="sub_contant1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit</p>
+                    <h1>Ayo, Cari Apatemen Impian Anda Disin...</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Vel ut alias omnis nam officiis cupiditate.</p>
+                    <button class="button1">LIHAT SELENGKAPNYA</button>
+                    <button class="button2">SEWA SAKARANG</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="overlay" id="overlay"></div>
+
+        <div class="contact_form">
+            <div class="contact">
+                <div class="form-section">
+                    <h2>Hubungi kami</h2>
+                    <p>Jangan ragu untuk meminta konsultasi atau bertanya
+                        langsung saja hubungi kami</p>
+
+                    <input type="text" id="firstName" placeholder="First Name">
+                    <small id="firstNameError" class="error"></small>
+
+                    <input type="text" id="lastName" placeholder="Last Name">
+                    <small id="lastNameError" class="error"></small>
+
+                    <input type="email" id="email" placeholder="Email Address">
+                    <small id="emailError" class="error"></small>
+
+                    <select id="topic">
+                        <option value disabled selected>-- Choose Topic
+                            --</option>
+                        <option value="topic1">Topic 1</option>
+                        <option value="topic2">Topic 2</option>
+                    </select>
+                    <small id="topicError" class="error"></small>
+
+                    <textarea id="message"
+                        placeholder="Ketik pesan disini..."></textarea>
+                    <small id="messageError" class="error"></small>
+
+                    <button type="button" class="contactbtn"
+                        onclick="validateForm()">SEND MESSAGE</button>
+                </div>
+
+                <div class="info-section">
+                    <h2>Tetap Bersama Kami</h2>
+                    <h2>Hubungi kami</h2>
+                    <p>Jangan ragu untuk meminta konsultasi atau bertanya
+                        langsung saja hubungi kami</p>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Tempat kami,
+                            Jakarta, Indonesia</li>
+                        <li><i class="far fa-envelope"></i> Email Address,
+                            Hello@email.com</li>
+                        <li><i class="fas fa-phone"></i> +62 123 456 789</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section1">
+                    <h3><span style="color: #ffd700;">🏠</span> HOUSE.</h3>
+                    <p>Apilkasi terbaik layanan penginapan di seluruh apartemen
+                        dan hotel di Indonesia</p>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-whatsapp icons"></i>
+                        <i class="fa-brands fa-instagram icons"></i>
+                        <i class="fa-brands fa-twitter icons"></i>
+                        <i class="fa-brands fa-snapchat icons"></i>
+                    </div>
+                </div>
+                <div class="footer-section2">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">&#10148; Home</a></li>
+                        <li><a href="#">&#10148; About Us</a></li>
+                        <li><a href="#">&#10148; Check-in Check-out</a></li>
+                        <li><a href="#">&#10148; Layanan</a></li>
+                        <li><a href="#">&#10148; Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section3">
+                    <h3>Site Links</h3>
+                    <ul>
+                        <li><a href="#">&#10148; Syarat dan ketentuan</a></li>
+                        <li><a href="#">&#10148; Disclaimer</a></li>
+                        <li><a href="#">&#10148; Hubungi kami</a></li>
+                        <li><a href="#">&#10148; GDPR</a></li>
+                        <li><a href="#">&#10148; Aturan penggunaan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section4">
+                    <h3>Tetap bersama kami</h3>
+                    <p>📍 Jakarta, Indonesia</p>
+                    <p><a href="mailto:Hello@Email.com">📧
+                            Hello@Email.com</a></p>
+                    <p>📞 (+62) 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                <div class="copyright">
+                    <p>© COPYRIGHT DIESNATALIS</p>
+                </div>
+            </div>
+
+        </footer>
+
+        <script>
+        function validateForm() {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const topic = document.getElementById('topic').value;
+
+            const firstNameError = document.getElementById('firstNameError');
+            const lastNameError = document.getElementById('lastNameError');
+            const emailError = document.getElementById('emailError');
+            const topicError = document.getElementById('topicError');
+
+            // Clear previous errors
+            firstNameError.textContent = '';
+            lastNameError.textContent = '';
+            emailError.textContent = '';
+            topicError.textContent = '';
+
+            let isValid = true;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+
+            if (!firstName) {
+                firstNameError.textContent = 'Firstname is Required!';
+                isValid = false;
+            }
+
+            if (!lastName) {
+                lastNameError.textContent = 'Lastname is Required!';
+                isValid = false;
+            }
+
+            if (!email || !emailPattern.test(email)) {
+                emailError.textContent = 'Please Enter Valid Email!';
+                isValid = false;
+            }
+
+            if (!topic) {
+                topicError.textContent = 'Please Choos Any Topic!';
+                isValid = false;
+            }
+
+
+            if (isValid) {
+                alert("Message send Successfully");
+                // Clear form (optional)
+                document.getElementById('firstName').value = '';
+                document.getElementById('lastName').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('topic').selectedIndex = 0;
+                document.getElementById('message').value = '';
+            }
+        }
+    </script>
+        <script src="script.js"></script>
+    </body>
+</html>
